@@ -4,7 +4,7 @@
 
 ;"Settings"
 
-<CONSTANT RELEASEID 2>
+<CONSTANT RELEASEID 503>
 <VERSION ZIP>
 <FREQUENT-WORDS?>
 <SETG ZORK-NUMBER 1>
@@ -2025,7 +2025,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 	= V-LOOK-INSIDE>
 <SYNTAX EXAMINE ON OBJECT (HELD CARRIED IN-ROOM ON-GROUND MANY)
 	= V-LOOK-INSIDE>
-<SYNONYM EXAMINE DESCRIBE WHAT WHATS>
+<SYNONYM EXAMINE DESCRIBE WHAT WHATS X>              ;"Modification: Added X as synonym for EXAMINE"
 
 <SYNTAX EXORCISE OBJECT = V-EXORCISE>
 <SYNTAX EXORCISE OUT OBJECT (FIND ACTORBIT) = V-EXORCISE>
@@ -2649,8 +2649,10 @@ game position, or end this session of the game?|
 		'<TELL "ZORK I: The Great Underground Empire|
 Infocom interactive fiction - a fantasy story|
 |
-This version i slightly modified to allow unlimited carry capacity and almost|
-unlimited batteries in the lantern.|
+This version i slightly modified with these changes:|
+     1. Unlimited carry capacity.|
+     2. Almost unlimited battery life in the lantern.|
+     3. X is added as a synonym for EXAMINE.|
 |
 Copyright (c) 1981, 1982, 1983, 1984, 1985, 1986">)
 	       (<==? ,ZORK-NUMBER 2>
@@ -11928,3 +11930,5 @@ here is too friendly anyhow. Gulp!" CR>)>>
 	 <COND (<AND <EQUAL? .RARG ,M-ENTER>
 		     <IN? ,TROLL ,HERE>>
 		<THIS-IS-IT ,TROLL>)>>
+
+		
