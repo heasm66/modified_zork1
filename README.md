@@ -4,7 +4,8 @@ This is a Zork 1 with unlimited carrying capacity and light from the lantern.
 
 Changed LOAD-MAX and LOAD-ALLOWED from 100 to 10.000.  
 Changed FUMBLE-NUMBER from 7 to 700.  
-Changed First numbr in LAMP-TABLE from 100 to 10.000.  
+Changed First number in LAMP-TABLE from 100 to 10.000.  
+Added X as synonym for EXAMINE.
 
     <GLOBAL LOAD-MAX 10000>
 
@@ -21,5 +22,6 @@ Changed First numbr in LAMP-TABLE from 100 to 10.000.
 	           15   
     	       "The lamp is nearly out."
 	           0>>
-         
+		   
+    <SYNONYM EXAMINE DESCRIBE WHAT WHATS X>      
    
