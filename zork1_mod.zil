@@ -4,7 +4,7 @@
 
 ;"Settings"
 
-<CONSTANT RELEASEID 1>
+<CONSTANT RELEASEID 2>
 <VERSION ZIP>
 <FREQUENT-WORDS?>
 <SETG ZORK-NUMBER 1>
@@ -2648,6 +2648,10 @@ game position, or end this session of the game?|
 	%<COND (<==? ,ZORK-NUMBER 1>
 		'<TELL "ZORK I: The Great Underground Empire|
 Infocom interactive fiction - a fantasy story|
+|
+This version i slightly modified to allow unlimited carry capacity and almost|
+unlimited batteries in the lantern.|
+|
 Copyright (c) 1981, 1982, 1983, 1984, 1985, 1986">)
 	       (<==? ,ZORK-NUMBER 2>
 		'<TELL "ZORK II: The Wizard of Frobozz|
@@ -4442,7 +4446,7 @@ for the final secret.\"" CR>)>)
 
 "Object Manipulation"
 
-<GLOBAL FUMBLE-NUMBER 700>
+<GLOBAL FUMBLE-NUMBER 700>      ;"Modification: Original value was 7"
 
 <GLOBAL FUMBLE-PROB 8>
 
@@ -4859,9 +4863,9 @@ stumbled into an authentic grue lair!">))
 
 "Objects shared by all three Zorks go here"
 
-<GLOBAL LOAD-MAX 10000>
+<GLOBAL LOAD-MAX 10000>     ;"Modification: Original value was 100"
 
-<GLOBAL LOAD-ALLOWED 10000>
+<GLOBAL LOAD-ALLOWED 10000> ;"Modification: Original value was 100"
 
 <OBJECT BLESSINGS
 	(IN GLOBAL-OBJECTS)
@@ -9967,7 +9971,7 @@ artist's masterpieces, you have destroyed one." CR>)>>
 
 <GLOBAL LAMP-TABLE
 	<TABLE (PURE)
-	       10000
+	       10000                                           ;"Modification: Original value was 100"
 	       "The lamp appears a bit dimmer."
 	       70
 	       "The lamp is definitely dimmer now."
@@ -11924,5 +11928,3 @@ here is too friendly anyhow. Gulp!" CR>)>>
 	 <COND (<AND <EQUAL? .RARG ,M-ENTER>
 		     <IN? ,TROLL ,HERE>>
 		<THIS-IS-IT ,TROLL>)>>
-
-		
