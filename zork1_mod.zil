@@ -2649,7 +2649,7 @@ game position, or end this session of the game?|
 		'<TELL "ZORK I: The Great Underground Empire|
 Infocom interactive fiction - a fantasy story|
 |
-This version i slightly modified with these changes:|
+This version is slightly modified with these changes:|
      1. Unlimited carry capacity.|
      2. Almost unlimited battery life in the lantern.|
      3. X is added as a synonym for EXAMINE.|
